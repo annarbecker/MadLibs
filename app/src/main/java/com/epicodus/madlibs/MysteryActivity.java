@@ -9,8 +9,8 @@ import android.widget.EditText;
 
 public class MysteryActivity extends AppCompatActivity {
     private Button mStartButton;
-    private EditText mAdjEditText1;
-    private EditText mAdjEditText2;
+    private EditText mVerbEditText1;
+    private EditText mVerbEditText2;
     private EditText mNounEditText1;
     private EditText mNounEditText2;
 
@@ -20,23 +20,21 @@ public class MysteryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mystery);
 
 
-        mAdjEditText1 = (EditText) findViewById(R.id.adjEditText1);
-        mAdjEditText2 = (EditText) findViewById(R.id.adjEditText2);
+        mVerbEditText1 = (EditText) findViewById(R.id.verbEditText1);
+        mVerbEditText2 = (EditText) findViewById(R.id.verbEditText2);
         mNounEditText1 = (EditText) findViewById(R.id.nounEditText1);
         mNounEditText2 = (EditText) findViewById(R.id.nounEditText2);
         mStartButton = (Button) findViewById(R.id.startButton);
         mStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String adj1 = mAdjEditText1.getText().toString();
-                String adj2 = mAdjEditText2.getText().toString();
+                String verb1 = mVerbEditText1.getText().toString();
+                String verb2 = mVerbEditText2.getText().toString();
                 String noun1 = mNounEditText1.getText().toString();
                 String noun2 = mNounEditText2.getText().toString();
                 Intent intent = new Intent(MysteryActivity.this, StoryActivity.class);
-                intent.putExtra("adj1", adj1);
-                intent.putExtra("adj2", adj2);
-                intent.putExtra("noun1", noun1);
-                intent.putExtra("noun2", noun2);
+                intent.putExtra("wholeStory", "'Who " + verb1 + "ed the " + noun1 + ",' the " + noun2 + " " + verb2 + "ed.");
+
 
                 startActivity(intent);
             }

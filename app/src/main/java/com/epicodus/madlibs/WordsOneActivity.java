@@ -20,8 +20,8 @@ public class WordsOneActivity extends AppCompatActivity {
         setContentView(R.layout.activity_words_one);
 
 
-        mAdjEditText1 = (EditText) findViewById(R.id.adjEditText1);
-        mAdjEditText2 = (EditText) findViewById(R.id.adjEditText2);
+        mAdjEditText1 = (EditText) findViewById(R.id.verbEditText1);
+        mAdjEditText2 = (EditText) findViewById(R.id.verbEditText2);
         mNounEditText1 = (EditText) findViewById(R.id.nounEditText1);
         mNounEditText2 = (EditText) findViewById(R.id.nounEditText2);
         mStartButton = (Button) findViewById(R.id.startButton);

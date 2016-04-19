@@ -31,7 +31,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/adjEditText1"
+        android:id="@+id/verbEditText1"
         android:layout_below="@+id/madLibsTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -40,17 +40,17 @@
         android:layout_marginTop="26dp"
         android:layout_alignRight="@+id/madLibsTextView"
         android:layout_alignEnd="@+id/madLibsTextView"
-        android:hint="Enter an adjective"/>
+        android:hint="Enter an verb"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/adjEditText2"
+        android:id="@+id/nounEditText3"
         android:layout_marginTop="31dp"
-        android:hint="Enter an adjective"
-        android:layout_below="@+id/adjEditText1"
-        android:layout_alignLeft="@+id/adjEditText1"
-        android:layout_alignStart="@+id/adjEditText1"
+        android:hint="Enter an noun"
+        android:layout_below="@+id/verbEditText1"
+        android:layout_alignLeft="@+id/verbEditText1"
+        android:layout_alignStart="@+id/verbEditText1"
         android:layout_alignRight="@+id/madLibsTextView"
         android:layout_alignEnd="@+id/madLibsTextView" />
 
@@ -59,10 +59,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/nounEditText1"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/adjEditText2"
-        android:layout_alignEnd="@+id/adjEditText2"
-        android:layout_alignLeft="@+id/adjEditText2"
-        android:layout_alignStart="@+id/adjEditText2"
+        android:layout_alignRight="@+id/nounEditText3"
+        android:layout_alignEnd="@+id/nounEditText3"
+        android:layout_alignLeft="@+id/nounEditText3"
+        android:layout_alignStart="@+id/nounEditText3"
         android:hint="Enter a noun"/>
 
     <EditText

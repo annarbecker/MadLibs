@@ -23,13 +23,13 @@ public class MainActivityInstrumentationTest {
 
     @Test
     public void validateEditText() {
-        onView(withId(R.id.adjEditText1)).perform(typeText("fast")).check(matches(withText("fast")));
+        onView(withId(R.id.verbEditText1)).perform(typeText("fast")).check(matches(withText("fast")));
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        onView(withId(R.id.adjEditText2)).perform(typeText("slow")).check(matches(withText("slow")));
+        onView(withId(R.id.verbEditText2)).perform(typeText("slow")).check(matches(withText("slow")));
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
@@ -50,8 +50,8 @@ public class MainActivityInstrumentationTest {
         String adj2 = "slow";
         String noun1 = "cat";
         String noun2 = "dog";
-        onView(withId(R.id.adjEditText1)).perform(typeText(adj1));
-        onView(withId(R.id.adjEditText2)).perform(typeText(adj2));
+        onView(withId(R.id.verbEditText1)).perform(typeText(adj1));
+        onView(withId(R.id.verbEditText2)).perform(typeText(adj2));
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
