@@ -3,47 +3,54 @@ package com.epicodus.madlibs;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TAG = MainActivity.class.getSimpleName();
-    private Button mStartButton;
-    private EditText mAdjEditText1;
-    private EditText mAdjEditText2;
-    private EditText mNounEditText1;
-    private EditText mNounEditText2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mAdjEditText1 = (EditText) findViewById(R.id.adjEditText1);
-        mAdjEditText2 = (EditText) findViewById(R.id.adjEditText2);
-        mNounEditText1 = (EditText) findViewById(R.id.nounEditText1);
-        mNounEditText2 = (EditText) findViewById(R.id.nounEditText2);
-        mStartButton = (Button) findViewById(R.id.startButton);
-            mStartButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String adj1 = mAdjEditText1.getText().toString();
-                    String adj2 = mAdjEditText2.getText().toString();
-                    String noun1 = mNounEditText1.getText().toString();
-                    String noun2 = mNounEditText2.getText().toString();
-                    Intent intent = new Intent(MainActivity.this, StoryActivity.class);
-                    intent.putExtra("adj1", adj1);
-                    intent.putExtra("adj2", adj2);
-                    intent.putExtra("noun1", noun1);
-                    intent.putExtra("noun2", noun2);
-                    Log.d(TAG, adj1);
-                    Log.d(TAG, adj2);
-                    Log.d(TAG, noun1);
-                    Log.d(TAG, noun2);
+         final Spinner spinner = (Spinner) findViewById(R.id.storySpinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.story_array, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String spinner_story_value = spinner.getSelectedItem().toString();
+                if (spinner_story_value.equals("Vacation")) {
+                    Intent intent = new Intent(MainActivity.this, VacationActivity.class);
+                    startActivity(intent);
+                } else if (spinner_story_value.equals("Mystery")) {
+                    Intent intent = new Intent(MainActivity.this, MysteryActivity.class);
+                    startActivity(intent);
+                } else if(spinner_story_value.equals("Animals")) {
+                    Intent intent = new Intent(MainActivity.this, AnimalsActivity.class);
                     startActivity(intent);
                 }
-            });
-    }
-}
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+
+            }
+
+        }
+
+
+

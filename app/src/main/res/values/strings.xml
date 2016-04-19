@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MadLibs</string>
+    <string name="welcome">Choose a story!</string>
+    <string-array name="story_array">
+        <item>Make a selection!</item>
+        <item>Vacation</item>
+        <item>Mystery</item>
+        <item>Animals</item>
+    </string-array>
 </resources>

@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StoryActivity"></activity>
+        <activity android:name=".StoryActivity" />
+        <activity android:name=".WordsOneActivity" />
+        <activity android:name=".VacationActivity" />
+        <activity android:name=".MysteryActivity" />
+        <activity android:name=".AnimalsActivity"></activity>
     </application>
 
 </manifest>
