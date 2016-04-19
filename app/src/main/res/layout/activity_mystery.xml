@@ -46,11 +46,11 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nounEditText1"
-        android:hint="Enter a noun"
-        android:layout_below="@+id/nounEditText3"
-        android:layout_alignLeft="@+id/nounEditText3"
-        android:layout_alignStart="@+id/nounEditText3"
+        android:id="@+id/verbEditText2"
+        android:hint="Enter a verb"
+        android:layout_below="@+id/verbEditText1"
+        android:layout_alignLeft="@+id/verbEditText1"
+        android:layout_alignStart="@+id/verbEditText1"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_alignRight="@+id/madLibsTextView"
         android:layout_alignEnd="@+id/madLibsTextView" />
@@ -58,24 +58,24 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nounEditText2"
-        android:layout_below="@+id/nounEditText1"
-        android:layout_alignLeft="@+id/nounEditText1"
-        android:layout_alignStart="@+id/nounEditText1"
+        android:id="@+id/nounEditText1"
+        android:layout_below="@+id/verbEditText2"
+        android:layout_alignLeft="@+id/verbEditText2"
+        android:layout_alignStart="@+id/verbEditText2"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:layout_alignRight="@+id/nounEditText1"
-        android:layout_alignEnd="@+id/nounEditText1"
+        android:layout_alignRight="@+id/verbEditText2"
+        android:layout_alignEnd="@+id/verbEditText2"
         android:hint="Enter a noun"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/nounEditText3"
+        android:id="@+id/nounEditText2"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:hint="Enter a noun"
-        android:layout_below="@+id/verbEditText1"
-        android:layout_alignLeft="@+id/verbEditText1"
-        android:layout_alignStart="@+id/verbEditText1"
+        android:layout_below="@+id/nounEditText1"
+        android:layout_alignLeft="@+id/nounEditText1"
+        android:layout_alignStart="@+id/nounEditText1"
         android:layout_alignRight="@+id/madLibsTextView"
         android:layout_alignEnd="@+id/madLibsTextView" />
 
